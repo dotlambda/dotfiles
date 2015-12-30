@@ -1,0 +1,11 @@
+[options]
+font = ProFont 9
+cursor_blink = off
+mouse_autohide = true
+scrollback_lines = 4000
+cursor_shape = block
+
+[colors]
+foreground = #dcdccc
+foreground_bold = #ffffff
+background  = #101b2a

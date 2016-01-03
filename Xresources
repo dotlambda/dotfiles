@@ -1,0 +1,19 @@
+URxvt.background: #101b2a
+URxvt.foreground: #dcdccc
+
+URxvt.font: xft:ProFont:pixelsize=11
+
+URxvt.scrollstyle: plain
+
+URxvt.scrollBar_right: true
+
+URxvt.termName: rxvt-256color
+
+URxvt.iso14755: false
+!URxvt.iso14755_52: false
+
+! clipboard
+! source: http://wiki.ubuntuusers.de/rxvt-unicode
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste

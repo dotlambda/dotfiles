@@ -27,7 +27,10 @@ ethernet enp2s0 {
 }
 
 battery 1 {
-	format = "BAT %percentage %remaining"
+	format = "%status %percentage %remaining"
+    status_bat = "⚡"
+    status_chr = "⚇ "
+    status_full = "☻ "
 	path = "/sys/class/power_supply/BAT%d/uevent"
 	low_threshold = 10
 }

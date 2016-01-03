@@ -15,6 +15,7 @@ set -x VISUAL vim
 set -x BROWSER chromium
 set -x PAGER most
 set -x TERM xterm-256color
+set -x TERMCMD termite # Which terminal ranger uses to start an application in
 set -x GTK_THEME Adwaita
 
 alias octave="octave --no-gui"

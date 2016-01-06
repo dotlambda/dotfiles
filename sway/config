@@ -13,7 +13,9 @@ set $fg #dcdccc
 set $alert #ff9800
 
 # Your preferred application launcher
-set $menu dmenu_run -fn ProFont-11 -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg"
+set $dmenu dmenu_run -fn ProFont-11 -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg"
+#set $menu j4-dmenu-desktop --dmenu="$dmenu" --term="$term"
+set $menu $dmenu
 
 ### Output configuration
 #
@@ -134,6 +136,11 @@ output * bg /usr/share/sway/wallpaper.jpg fill
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
+# Volume keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 3%+ unmute && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master unmute 3%- && killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec amixer -q set Master toggle && killall -SIGUSR1 i3status
 
 #
 # Status Bar:

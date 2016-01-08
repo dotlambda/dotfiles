@@ -13,9 +13,8 @@ set $fg #dcdccc
 set $alert #ff9800
 
 # Your preferred application launcher
-set $dmenu dmenu_run -fn ProFont-11 -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg"
-#set $menu j4-dmenu-desktop --dmenu="$dmenu" --term="$term"
-set $menu $dmenu
+set $dmenu 'dmenu -fn ProFont-11 -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg"'
+set $menu j4-dmenu-desktop --dmenu=$dmenu --term=urxvt
 
 ### Output configuration
 #

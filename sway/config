@@ -152,6 +152,7 @@ bar {
 
             # border background text
             inactive_workspace $bg $bg $fg
+            active_workspace $fg $bg $fg
             focused_workspace $fg $fg $bg
             urgent_workspace $alert $alert $bg
         }

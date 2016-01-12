@@ -3,7 +3,7 @@ exec xrdb ~/.config/Xresources
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Your preferred terminal emulator
 set $term urxvt -e /usr/bin/fish 
 
@@ -14,6 +14,7 @@ set $alert #ff9800
 
 # Your preferred application launcher
 set $dmenu 'dmenu -i -fn ProFont-11 -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg"'
+set $bemenu 'bemenu -i -p "" --fn "ProFont 11" --nb "$bg" --nf "$fg" --hb "$fg" --hf "$bg" --fb "$bg" --ff "$fg"'
 set $menu j4-dmenu-desktop --dmenu=$dmenu --term=urxvt
 
 ### Output configuration

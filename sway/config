@@ -15,7 +15,7 @@ set $alert #ff9800
 # Your preferred application launcher
 set $dmenu 'dmenu -i -fn ProFont-11 -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg"'
 set $bemenu 'bemenu -i -p "" --fn "ProFont 11" --nb "$bg" --nf "$fg" --hb "$fg" --hf "$bg" --fb "$bg" --ff "$fg"'
-set $menu j4-dmenu-desktop --dmenu=$dmenu --term=urxvt
+set $menu j4-dmenu-desktop --dmenu="$dmenu" --term=urxvt
 
 ### Output configuration
 output * bg ~/wallpaper.jpg fill

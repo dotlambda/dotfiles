@@ -19,3 +19,4 @@ set -x TERMCMD termite # Which terminal ranger uses to start an application in
 set -x GTK_THEME Adwaita
 
 alias octave="octave --no-gui"
+alias vim="nvim"

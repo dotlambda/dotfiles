@@ -20,12 +20,6 @@ autocmd FileType tex setlocal spell spelllang=de_de
 filetype plugin indent on
 syntax on
 
-if has('vim_starting')
-    set nocompatible
-    set runtimepath+=$XDG_CONFIG_HOME/nvim/bundle/dart-vim-plugin
-endif
-
-
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'lervag/vimtex'
 call plug#end()

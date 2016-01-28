@@ -10,12 +10,10 @@ set -xU LESS_TERMCAP_us (printf "\e[01;32m")      # begin underline
 
 set -x PATH $PATH (ruby -e 'print Gem.user_dir')/bin
 
-set -x EDITOR vim
-set -x VISUAL vim
-set -x BROWSER chromium
+set -x VISUAL nvim
+set -x BROWSER firefox
 set -x PAGER most
-set -x TERM xterm-256color
-set -x TERMCMD termite # Which terminal ranger uses to start an application in
+set -x TERMCMD urxvt # Which terminal ranger uses to start an application in
 set -x GTK_THEME Adwaita
 
 alias octave="octave --no-gui"

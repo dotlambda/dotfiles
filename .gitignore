@@ -1,1 +1,6 @@
+fish/fish_history
+fish/fishd.*
 nvim/plugged/
+ranger/bookmarks
+ranger/history
+ranger/tagged

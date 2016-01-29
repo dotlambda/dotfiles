@@ -1,2 +1,9 @@
 set font "ProFont 8"
+set default-fg "#dcdccc"
+set default-bg "#101b2a"
+set inputbar-fg "#101b2a"
+set inputbar-bg "#dcdccc"
+set statusbar-fg "#dcdccc"
+set statusbar-bg "#101b2a"
 set guioptions ""
+

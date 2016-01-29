@@ -1,0 +1,8 @@
+binlist=(
+    'env XKB_DEFAULT_LAYOUT=de sway'
+    'startx'
+    'fish --login'
+)
+namelist=(Sway i3 Console)
+flaglist=(C C C)
+dialogrc=/usr/share/cdm/themes/blackandwhite

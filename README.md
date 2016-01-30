@@ -6,6 +6,7 @@ What's special about these? I'm using a window manager called [Sway][Sway] runni
 [Arch Linux]: https://www.archlinux.org/
 [Sway]: https://github.com/SirCmpwn/sway
 
+![](https://raw.githubusercontent.com/dotlambda/dotfiles/master/screenshots/2016-01-30-054717_swaygrab.png)
 
 ## Installation
 Clone this repo with git's `--recursive` flag to obtain all submodules. Run [bootstrap.sh][bootstrap.sh] to symlink the dotfiles in this repo to `$HOME` or `$XDG_CONFIG_HOME` and to install vim plugins.

@@ -8,18 +8,23 @@ set $mod Mod4
 # Your preferred terminal emulator
 set $term urxvtc -e /usr/bin/fish 
 
-# colors
+# Colors
 set $bg #101b2a
+set $border #274266
 set $fg #dcdccc
+set $grey #99998e
 set $alert #ff9800
 
 # Your preferred application launcher
-set $dmenu 'dmenu -i -fn ProFont-11 -nb "$bg" -nf "$fg" -sb "$fg" -sf "$bg"'
-set $bemenu 'bemenu -i -p "" --fn "ProFont 11" --nb "$bg" --nf "$fg" --hb "$fg" --hf "$bg" --fb "$bg" --ff "$fg"'
-set $menu j4-dmenu-desktop --dmenu="$dmenu" --term=urxvt
+set $dmenu dmenu -i -fn ProFont-11 -nb \\$bg -nf \\$fg -sb \\$fg -sf \\$bg
+#set $bemenu bemenu -i -p '' --fn 'ProFont 11' --nb \\$bg --nf \\$fg --hb \\$fg --hf \\$bg --fb \\$bg --ff \\$fg
+#set $rofi rofi -dmenu -i -p '' -font 'ProFont 9' -lines 10 -width 30 -bg \\$bg -fg \\$fg -hlbg \\$fg -hlfg \\$bg -bc \\$fg
+set $menu j4-dmenu-desktop --dmenu "$dmenu" --term urxvt
 
 ### Output configuration
 output * bg ~/wallpaper.jpg fill
+
+gaps inner 2
 
 ### Key bindings
 #

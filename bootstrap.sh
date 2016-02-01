@@ -11,8 +11,7 @@ link_file() {
   local ORIG="$1"; local NEW="$2"
 
   echo "  '$ORIG'"
-  if [[ $BACKUP =~ ^[Yy]$ ]] && \
-    [ ! -h $ORIG ]; then
+  if [[ $BACKUP =~ ^[Yy]$ ]] && [ ! -h $ORIG ]; then
     mv "$ORIG" "${ORIG}.save" &> /dev/null \
       && echo "    ...backed up"
   else
@@ -47,7 +46,8 @@ done
 
 mkdir -p $HOME/.config
 for DOTFILE in $(find . -maxdepth 1 -type d ! -path . ! -path './.*'); do
-  link_file "$XDG_CONFIG_HOME/$(basename $DOTFILE)" "$PWD/$(basename $DOTFILE)"
+  [[ $DOTFILE != './screenshots' ]] \
+    && link_file "$XDG_CONFIG_HOME/$(basename $DOTFILE)" "$PWD/$(basename $DOTFILE)"
 done
 
 nvim +PlugInstall +qall # Install vim-plug plugins

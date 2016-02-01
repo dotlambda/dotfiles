@@ -187,6 +187,6 @@ bar {
             focused_workspace $fg $fg $bg
             urgent_workspace $alert $alert $bg
         }
-        font pango:ProFont 11px
+        font pango:ProFont 8
         status_command i3status
 }

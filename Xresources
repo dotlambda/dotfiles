@@ -1,7 +1,7 @@
 URxvt.background: #101b2a
 URxvt.foreground: #dcdccc
 
-URxvt.font: xft:ProFont:pixelsize=11
+URxvt.font: xft:ProFont:size=8
 
 URxvt.scrollstyle: plain
 

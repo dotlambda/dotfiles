@@ -1,5 +1,5 @@
 [options]
-font = ProFont 9
+font = ProFont 8
 cursor_blink = off
 mouse_autohide = true
 scrollback_lines = 4000

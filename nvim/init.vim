@@ -1,19 +1,17 @@
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set expandtab
-set smarttab
 
-set showcmd		    "show partial commands
+set showcmd     " Show partial commands
 
-set number		    "show line numbers
+set number      " Show line numbers
 
-set hlsearch		"highlight search results
-set incsearch		"immediately show matches
+set hlsearch    " Highlight search results
+set incsearch   " Immediately show matches
 
-set ignorecase		"case insensitive searching
-set smartcase		"case sensitive searching when pattern includes upper case characters
-
-set autoindent		"indent new line like the previous one
+set ignorecase  " Case insensitive searching
+set smartcase   " Case sensitive searching when pattern includes upper case characters
 
 autocmd FileType tex setlocal spell spelllang=de_de
 
@@ -21,5 +19,11 @@ filetype plugin indent on
 syntax on
 
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
-    Plug 'lervag/vimtex'
+  Plug 'tpope/vim-sensible'
+  Plug 'lervag/vimtex'
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'editorconfig/editorconfig-vim'
+
+  " Install YouCompleteMe with JavaScript support 
+  Plug 'Valloric/YouCompleteMe', { 'do': 'python2 ./install.py --tern-completer' }
 call plug#end()

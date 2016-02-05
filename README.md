@@ -15,7 +15,7 @@ Clone this repo with git's `--recursive` flag to obtain all submodules. Run [boo
 
 ## What software do these configure?
 * [CDM](https://github.com/ghost1227/cdm): console-based display manager
-* [fish](https://fishshell.com/): the shell I use
+* [fish](https://fishshell.com/): the shell I previously used
 * [i3wm](https://i3wm.org/): not used anymore, because I switched to Wayland
 * [Neovim](https://neovim.io/): vim fork
   * [vim-plug](https://github.com/junegunn/vim-plug): plugin manager
@@ -24,5 +24,7 @@ Clone this repo with git's `--recursive` flag to obtain all submodules. Run [boo
 * [termite](https://github.com/thestinger/termite/): terminal, though I only used it in i3
 * [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html): terminal, configured in [Xresources][Xresources]
 * [zathura](https://pwmt.org/projects/zathura/): PDF reader
+* [Zsh](http://www.zsh.org/): my shell
+  * [Oh My Zsh](http://ohmyz.sh/)
 
 [Xresources]: https://github.com/dotlambda/dotfiles/blob/master/Xresources

@@ -5,3 +5,4 @@ nvim/plugged/
 ranger/bookmarks
 ranger/history
 ranger/tagged
+zsh/.zcompdump*

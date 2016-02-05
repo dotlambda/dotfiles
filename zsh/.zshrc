@@ -14,8 +14,6 @@ export PATH=$HOME/bin:$(ruby -e 'print Gem.user_dir')/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export VISUAL=nvim
 export BROWSER=firefox
 export PAGER=most

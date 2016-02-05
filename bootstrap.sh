@@ -7,6 +7,10 @@
 
 set -e
 
+if [ -z $XDG_CONFIG_HOME]; then
+  XDG_CONFIG_HOME=$HOME/.config
+fi
+
 link_file() {
   local ORIG="$1"; local NEW="$2"
 

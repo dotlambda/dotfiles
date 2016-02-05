@@ -26,4 +26,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 
   " Install YouCompleteMe with JavaScript support 
   Plug 'Valloric/YouCompleteMe', { 'do': 'python2 ./install.py --tern-completer' }
+
+  Plug 'godlygeek/tabular'
+  Plug 'plasticboy/vim-markdown'
 call plug#end()

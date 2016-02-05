@@ -1,5 +1,5 @@
 binlist=(
-    'env XKB_DEFAULT_LAYOUT=de sway'
+    'env XKB_DEFAULT_LAYOUT=de sway 2> ~/.sway.log'
     'startx'
     'fish --login'
 )

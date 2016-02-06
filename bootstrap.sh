@@ -7,8 +7,8 @@
 
 set -e
 
-if [ -z $XDG_CONFIG_HOME]; then
-  XDG_CONFIG_HOME=$HOME/.config
+if [[ -z "$XDG_CONFIG_HOME" ]]; then
+  XDG_CONFIG_HOME="$HOME/.config"
 fi
 
 link_file() {

@@ -1,7 +1,7 @@
 binlist=(
     'env XKB_DEFAULT_LAYOUT=de sway 2> ~/.sway.log'
     'startx'
-    'fish --login'
+    '$SHELL'
 )
 namelist=(Sway i3 Console)
 flaglist=(C C C)

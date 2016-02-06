@@ -1,0 +1,3 @@
+strict-ssl=true
+python=/usr/bin/python2
+prefix=~/.node_modules

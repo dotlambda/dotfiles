@@ -1,5 +1,7 @@
 exec xrdb $HOME/.Xresources
 exec urxvtd -q -f -o
+exec udieskie &
+exec transmission-daemon &
 
 ### Variables
 #

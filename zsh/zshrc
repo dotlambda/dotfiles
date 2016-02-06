@@ -1,0 +1,28 @@
+# Path to your oh-my-zsh installation.
+export ZSH=$XDG_CONFIG_HOME/zsh/oh-my-zsh
+export ZSH_CUSTOM=$ZSH/../custom
+
+ZSH_THEME="robbyrussell"
+DISABLE_AUTO_UPDATE="true"
+HIST_STAMPS="yyyy-mm-dd"
+
+plugins=(git zsh-syntax-highlighting)
+
+# User configuration
+
+export PATH=$HOME/bin:$(ruby -e 'print Gem.user_dir')/bin:$HOME/.node_modules/bin:$PATH
+
+source $ZSH/oh-my-zsh.sh
+
+export VISUAL=nvim
+export BROWSER=firefox
+export PAGER=most
+export TERMCMD=urxvt # Which terminal ranger uses to start an application in
+export GTK_THEME=Adwaita
+
+alias octave="octave --no-gui"
+alias vi=nvim
+alias vim=nvim
+
+# Be greeted with a fortune cookie :)
+command fortune -s | cowthink -f tux -W `expr $(stty size | cut -d " " -f 2) - 3` | lolcat

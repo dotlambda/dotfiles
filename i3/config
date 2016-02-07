@@ -7,7 +7,7 @@ font pango:ProFont 11px
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite -e /bin/fish
+bindsym $mod+Return exec termite -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill

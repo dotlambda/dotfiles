@@ -1,8 +1,9 @@
 binlist=(
-    'env XKB_DEFAULT_LAYOUT=de sway 2> ~/.sway.log'
-    'startx'
-    '$SHELL'
+  'env XKB_DEFAULT_LAYOUT=de sway 2> ~/.sway.log'
+  'startx'
+  '$SHELL -li'
+  '/usr/bin/fish -li'
 )
-namelist=(Sway i3 Console)
-flaglist=(C C C)
+namelist=(Sway i3 Console 'Console (fish)')
+flaglist=(C C C C)
 dialogrc=/usr/share/cdm/themes/blackandwhite

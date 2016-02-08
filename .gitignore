@@ -1,4 +1,5 @@
 fish/fish_history
+fish/fish_read_history
 fish/fishd.*
 nvim/.netrwhist
 nvim/plugged/

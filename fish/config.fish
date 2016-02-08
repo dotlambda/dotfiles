@@ -8,13 +8,19 @@ set -xU LESS_TERMCAP_so (printf "\e[01;44;33m")   # begin standout-mode - info b
 set -xU LESS_TERMCAP_ue (printf "\e[0m")          # end underline
 set -xU LESS_TERMCAP_us (printf "\e[01;32m")      # begin underline
 
-set -x PATH ~/bin (ruby -e 'print Gem.user_dir')/bin $PATH
+set -x PATH ~/.local/bin $PATH                        # PyPi packages
+set -x PATH (ruby -e 'print Gem.user_dir')/bin $PATH  # Ruby gems
+set -x PATH ~/.node_modules/bin $PATH                 # npm packages
+set -x PATH ~/bin $PATH
 
 set -x BROWSER firefox
 set -x TERMCMD urxvtc # Which terminal ranger uses to start an application in
 set -x GTK_THEME Adwaita
 
 alias octave "octave --no-gui"
+alias pip "__pip pip"
+alias pip2 "__pip pip2"
+alias pip3 "__pip pip3"
 
 alias vi "vim"
 if test -x (which nvim)

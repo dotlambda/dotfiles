@@ -45,6 +45,7 @@ for DOTFILE in $(find . -maxdepth 1 -type f ! -name '.*'); do
   [[ $DOTFILE != './bootstrap.sh' ]] \
     && [[ $DOTFILE != './README.md' ]] \
     && [[ $DOTFILE != './LICENSE' ]] \
+    && [[ ! $DOTFILE =~ pkglist ]] \
     && link_file "$HOME/.$(basename $DOTFILE)" "$PWD/$DOTFILE"
 done
 

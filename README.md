@@ -28,3 +28,8 @@ Clone this repo with git's `--recursive` flag to obtain all submodules. Run [boo
   * [Oh My Zsh](http://ohmyz.sh/)
 
 [Xresources]: https://github.com/dotlambda/dotfiles/blob/master/Xresources
+
+### Installed packages
+I've created two files:
+* [pkglist.txt](https://github.com/dotlambda/dotfiles/blob/master/pkglist.txt) where I store a record of all packages installed from the official Arch repo. This list is generated using `pacman -Qqen`.
+* [pkglist-local.txt](https://github.com/dotlambda/dotfiles/blob/master/pkglist-local.txt) where all packages installed from the [AUR](https://aur.archlinux.org/) are listed. This list is generated using `pacman -Qqem`.

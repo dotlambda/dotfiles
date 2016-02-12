@@ -1,6 +1,6 @@
 binlist=(
-  'env XKB_DEFAULT_LAYOUT=de sway 2> ~/.sway.log'
-  'startx'
+  '$HOME/dotfiles/sway/sway-run'
+  '$HOME/dotfiles/i3/i3-run'
   '$SHELL -li'
   '/usr/bin/fish -li'
 )

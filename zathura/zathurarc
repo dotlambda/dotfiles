@@ -1,12 +1,14 @@
 set font "ProFont 8"
 
 set default-fg "#dcdccc"
-set default-bg "#101b2a"
-set inputbar-fg "#101b2a"
+set default-bg "#000000"
+set inputbar-fg "#274266"
 set inputbar-bg "#dcdccc"
 set statusbar-fg "#dcdccc"
-set statusbar-bg "#101b2a"
+set statusbar-bg "#274266"
 
 set guioptions ""   # Don't show statusbar etc
 
 set recolor true    # Invert colors
+set recolor-darkcolor "#dcdccc"
+set recolor-lightcolor "#101b2a"

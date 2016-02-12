@@ -1,0 +1,15 @@
+#!/bin/bash
+
+urxvtd -q -f -o
+udiskie &
+transmission-daemon &
+
+# Combine shared (i3 & sway) config with i3 specific stuff
+dir=$(dirname ${BASH_SOURCE})
+file=$(mktemp)
+cat $dir/shared.config \
+    $dir/i3.config > $file
+export i3_config_file=$file
+
+# Start i3
+startx

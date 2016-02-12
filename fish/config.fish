@@ -8,9 +8,9 @@ set -xU LESS_TERMCAP_so (printf "\e[01;44;33m")   # begin standout-mode - info b
 set -xU LESS_TERMCAP_ue (printf "\e[0m")          # end underline
 set -xU LESS_TERMCAP_us (printf "\e[01;32m")      # begin underline
 
-set -x PATH ~/.local/bin $PATH                        # PyPi packages
-set -x PATH (ruby -e 'print Gem.user_dir')/bin $PATH  # Ruby gems
-set -x PATH ~/.node_modules/bin $PATH                 # npm packages
+set PATH ~/.local/bin $PATH                        # PyPi packages
+set PATH (ruby -e 'print Gem.user_dir')/bin $PATH  # Ruby gems
+set PATH ~/.node_modules/bin $PATH                 # npm packages
 set -x PATH ~/bin $PATH
 
 set -x BROWSER firefox
@@ -28,7 +28,6 @@ if test -x (which nvim)
   alias vim "nvim"
 else
   set -x VISUAL vim
-  alias vi "vim"
 end
 
 if test -x (which most)

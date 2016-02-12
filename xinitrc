@@ -19,16 +19,8 @@ srandrd $XDG_CONFIG_HOME/i3/detect_displays.sh
 # Disable PC speaker beep
 xset -b
 
-udiskie &
-transmission-daemon &
-
 # Load wallpaper for i3
-feh  --image-bg black --bg-center '/home/artiifix/wallpaper.jpg'
+feh --image-bg black --bg-center '/home/artiifix/wallpaper.jpg'
 
-VISUAL=nvim
-BROWSER=firefox
-PAGER=most
-TERMCMD=termite # Which terminal ranger uses to start an application in
-GTK_THEME=Adwaita
-
-exec i3
+# $i3_config_file is set in the i3-run script
+exec i3 -V -c $i3_config_file 2> ~/.i3.log

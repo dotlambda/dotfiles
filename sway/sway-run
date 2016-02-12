@@ -1,0 +1,17 @@
+#!/bin/bash
+
+urxvtd -q -f -o
+udiskie &
+transmission-daemon &
+
+# Combine shared (i3 & sway) config with sway specific stuff
+dir=$(dirname ${BASH_SOURCE})
+file=$(mktemp)
+cat $dir/shared.config \
+    $dir/sway.config > $file
+
+
+export XKB_DEFAULT_LAYOUT=de
+
+# Start sway
+sway -c $file 2> ~/.sway.log

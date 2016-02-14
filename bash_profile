@@ -1,11 +1,13 @@
-export PATH=$HOME/bin:$PATH
+#
+# ~/.bash_profile
+#
 
-if [[ -z "$XDG_CONFIG_HOME" ]]; then
-  export XDG_CONFIG_HOME="$HOME/.config"
+if [[ -f "$HOME/.bashrc" ]]; then
+  source "$HOME/.bashrc"
 fi
 
 # TMUX
 if which tmux >/dev/null 2>&1; then
-    #if not inside a tmux session, and if no session is started, start a new session
-    test -z "$TMUX" && (tmux attach || tmux new-session)
+  #if not inside a tmux session, and if no session is started, start a new session
+  test -z "$TMUX" && (tmux attach || tmux new-session)
 fi

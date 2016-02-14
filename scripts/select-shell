@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# scripts/select-shell
+# Select the (in my opinion) best shell available
+
 [[ -x "$(which fish)" ]] && exec $(which fish)
 [[ -x "$(which zsh)" ]] && exec $(which zsh)
 exec $(which bash)

@@ -21,6 +21,7 @@ alias octave "octave --no-gui"
 alias pip "__pip pip"
 alias pip2 "__pip pip2"
 alias pip3 "__pip pip3"
+alias rm "rm -I"
 
 alias vi "vim"
 if test -x (which nvim)

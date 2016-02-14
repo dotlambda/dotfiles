@@ -20,7 +20,7 @@ srandrd $XDG_CONFIG_HOME/i3/detect_displays.sh
 xset -b
 
 # Load wallpaper for i3
-feh --image-bg black --bg-center '/home/artiifix/wallpaper.jpg'
+feh --image-bg black --bg-fill '/home/artiifix/wallpaper.jpg'
 
 # $i3_config_file is set in the i3-run script
 exec i3 -V -c $i3_config_file 2> ~/.i3.log

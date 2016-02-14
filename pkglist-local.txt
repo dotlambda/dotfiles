@@ -17,5 +17,6 @@ texworks
 tor-browser-en
 ttf-ms-fonts
 xcmenu-git
+xonsh
 yaourt
 youtube-dl-git

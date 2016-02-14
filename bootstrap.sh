@@ -41,7 +41,7 @@ cd "$(dirname "${BASH_SOURCE}")" # Switch to dotfiles directory
 
 echo "Symlinking..."
 
-for DOTFILE in $(find . -maxdepth 1 -type f ! -name '.*'); do 
+for DOTFILE in $(find -L . -maxdepth 1 -type f ! -name '.*'); do 
   [[ $DOTFILE != './bootstrap.sh' ]] \
     && [[ $DOTFILE != './README.md' ]] \
     && [[ $DOTFILE != './LICENSE' ]] \
@@ -50,9 +50,18 @@ for DOTFILE in $(find . -maxdepth 1 -type f ! -name '.*'); do
 done
 
 mkdir -p $HOME/.config
-for DOTFILE in $(find . -maxdepth 1 -type d ! -path . ! -path './.*'); do
-  [[ $DOTFILE != './screenshots' ]] \
-    && link_file "$XDG_CONFIG_HOME/$(basename $DOTFILE)" "$PWD/$(basename $DOTFILE)"
+for DOTFILE in $(find -L . -maxdepth 1 -type d ! -path . ! -path './.*'); do
+  if [[ $DOTFILE = './vim' ]]; then
+    link_file "$HOME/.$(basename $DOTFILE)" "$PWD/$DOTFILE"
+  else
+    [[ $DOTFILE != './screenshots' ]] \
+      && link_file "$XDG_CONFIG_HOME/$(basename $DOTFILE)" "$PWD/$(basename $DOTFILE)"
+  fi
 done
 
-nvim +PlugInstall +qall # Install vim-plug plugins
+# Install vim-plug plugins
+if [[ -x "$(which nvim)" ]]; then
+  nvim +PlugInstall +qall
+else
+  vim +PlugInstall +qall
+fi

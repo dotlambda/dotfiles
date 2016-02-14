@@ -1,0 +1,4 @@
+#!/bin/bash
+[[ -x "$(which fish)" ]] && exec $(which fish)
+[[ -x "$(which zsh)" ]] && exec $(which zsh)
+exec $(which bash)

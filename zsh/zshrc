@@ -10,19 +10,27 @@ plugins=(git zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH=$HOME/bin:$(ruby -e 'print Gem.user_dir')/bin:$HOME/.node_modules/bin:$PATH
-
 source $ZSH/oh-my-zsh.sh
 
-export VISUAL=nvim
 export BROWSER=firefox
-export PAGER=most
-export TERMCMD=urxvt # Which terminal ranger uses to start an application in
+export TERMCMD=urxvtc # Which terminal ranger uses to start an application in
 export GTK_THEME=Adwaita
 
 alias octave="octave --no-gui"
-alias vi=nvim
-alias vim=nvim
+
+alias vi=vim
+if [[ -x $(which nvim) ]]; then
+  export VISUAL=nvim
+  alias vim=nvim
+else
+  export VISUAL=vim
+fi
+
+if [[ -x $(which most) ]]; then
+  export PAGER=most
+fi
 
 # Be greeted with a fortune cookie :)
-command fortune -s | cowthink -f tux -W `expr $(stty size | cut -d " " -f 2) - 3` | lolcat
+if [[ -x $(which fortune) && -x $(which cowthink) && -x $(which lolcat) ]]; then
+  command fortune -s | cowthink -f tux -W `expr $(stty size | cut -d " " -f 2) - 3` | lolcat
+fi

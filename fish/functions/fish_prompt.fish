@@ -1,4 +1,11 @@
 function fish_prompt
+  set -l last_status $status
+ 
+  set -l last_status_string ""
+  if [ $last_status -ne 0 ]
+    printf "%s(%d)%s " (set_color red --bold) $last_status (set_color normal)
+  end
+
 	if not set -q -g __fish_robbyrussell_functions_defined
     set -g __fish_robbyrussell_functions_defined
     function _git_branch_name
